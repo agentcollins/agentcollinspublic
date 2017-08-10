@@ -1,0 +1,12 @@
+1.  stdint.h is a header file that provides a set of typedefs that specify exact-width integer types, together with the defined minimum and maximum allowable values for each type, using macros. (paraphrased from http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdint.h.html)
+2.  They specify the exact number of bits used for each.  This allows for exact memmory size management.
+3.  BYTE is 1 byte, DWORD is 4 bytes, LONG is 4 bytes, WORD is 2 bytes.
+4.  The first 2 bytes of the BMP file format must be the character "B" then the character "M" in ASCII encoding.
+5.  bfSize is the size of the bitmap file. biSize is the number of bytes required by the BITMAPINFOHEADER structure.
+6.  If biHeight is negative, the bitmap is a top-down Device Indepedant Bitmap and its origin is the upper-left corner.
+7.  biBitCount in BITMAPINFOHEADER specifies the BMP's color depth.
+8.  If it can't return a FILE pointer.
+9.  We are reading one unit (unit is defined by the second argurment passed to fread) at a time.
+10. 0
+11. Sets the file position indicator for the stream passed as the first argument.  The new position is a combination of the second (offset) and third (whence) argumnts. So in line 84 it is setting the position in inptr to padding bytes from the current postion.
+12. SEEK_CUR is one possible arugment for the third agrument to be passed into fseek.  It will set the pointer to the current position (which will then will be changed by offset).
